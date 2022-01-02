@@ -9,3 +9,9 @@ this [website]('https://strftime.org/) provide specifc SRF time code.
 * `t` - opens in text mode. (default)
 * `b` - opens in binary mode.
 * `+` - opens a file for updating (reading and writing)
+
+## Working with PDF files
+* Often you may need to read in text data from a PDF file.
+* We can use the `PyPDF2` library to read in text data from a PDF file.
+* Some PDFs are created through scanning, instead of being exported from a text editor like Word
+* These scanned PDF are more like image files, making it much harder to extract the text.

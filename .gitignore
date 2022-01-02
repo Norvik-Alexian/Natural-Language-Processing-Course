@@ -128,3 +128,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Folder
+UPDATED_NLP_COURSE
+.DS_Store
