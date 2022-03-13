@@ -50,5 +50,10 @@ algorithmic implementations.
 However, Spacy does not include pre-created models for some applications, such as sentiment analysis, which is typically 
 easier to perform with NLTK.
 
+## What is NLP?
+_Natural Language Processing_ is an area of computer science and artificial intelligence concerned with interactions
+between computers and human (natural) languages, in particular how to program computers to process and analyze large 
+amount of natural language data.
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures)
