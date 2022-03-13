@@ -34,3 +34,21 @@ that the `\` in the pattern string are not meant to be escape slashes.
 * {3,} - Occurs 3 or more
 * \* - Occurs zero or more times
 * ? - Once or none
+
+## What is Spacy?
+* Open Source Natural Language Processing Library
+* Designed to effectively handle NLP tasks with the most efficient implementation of common algorithms.
+
+## What is NLTK?
+NLTK - Natural Language Toolkit is a very popular open source. It also provides many functionalities, but includes less
+efficient implementations.
+
+## NLTK vs Spacy
+For many common NLP tasks, Spacy is much faster and more efficient, at the cost of the user not being able to choose 
+algorithmic implementations.
+
+However, Spacy does not include pre-created models for some applications, such as sentiment analysis, which is typically 
+easier to perform with NLTK.
+
+## References
+[Spacy usage fact figures](https://spacy.io/usage/facts-figures)
