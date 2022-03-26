@@ -1,5 +1,5 @@
 ## Specific SRF time 
-this [website]('https://strftime.org/) provide specifc SRF time code.
+this [website](https://strftime.org/) provide specifc SRF time code.
 
 ## Python File Modes
 * `r` - opens a file for reading. (default)
