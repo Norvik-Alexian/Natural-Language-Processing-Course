@@ -45,6 +45,9 @@ that the `\` in the pattern string are not meant to be escape slashes.
 and describe the text data.
 * To download the "en_core_web_sm" model from spacy we need to run `python -m spacy download en_core_web_sm` command
 in our terminal.
+* The very first step in processing any text is to split up all the component parts, that is the word and punctuation into
+tokens, and these tokens are annotated inside the dock object to contain descriptive information.
+* `span`: span is a slice of a stock object in the form some start vs stop.
 
 ## What is NLTK?
 NLTK - Natural Language Toolkit is a very popular open source. It also provides many functionalities, but includes less
