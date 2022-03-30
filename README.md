@@ -85,6 +85,16 @@ Snowball is the name of a stemming language also developed by Martin Porter. The
 called the "English Stemmer" or "Porter2 Stemmer". It offers a slight imporvment over the original Porter Stemmer, both 
 in logic and speed.
 
+## Lemmatization
+In contrast to stemming, lemmatization looks beyond word reduction, and considers as language's full vocabulary to apply
+a morphological analysis to words. \
+The lemma of 'was' is 'be' and the lemma of 'mice' is 'mouse'.
+
+Lemmatization is typically seen as much more informative than simple stemming, which is why Spacy has opted to only have 
+Lemmatization available instead of Stemming.
+
+Lemmatization looks at surrounding text to determine a given word's part of speech, it does not categorize phrases.
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
 [SRF time code](https://strftime.org/) \
