@@ -1,3 +1,8 @@
+## What is NLP?
+_Natural Language Processing_ is an area of computer science and artificial intelligence concerned with interactions
+between computers and human (natural) languages, in particular how to program computers to process and analyze large 
+amount of natural language data.
+
 ## Python File Modes
 * `r` - opens a file for reading. (default)
 * `w` - opens a file for writing. creates a new file if it does not exist or truncates the file if it exits.
@@ -56,11 +61,6 @@ algorithmic implementations.
 However, Spacy does not include pre-created models for some applications, such as sentiment analysis, which is typically 
 easier to perform with NLTK.
 
-## What is NLP?
-_Natural Language Processing_ is an area of computer science and artificial intelligence concerned with interactions
-between computers and human (natural) languages, in particular how to program computers to process and analyze large 
-amount of natural language data.
-
 ## Tokenization
 Tokenization is the process of breaking up the original text into component pieces (tokens).\
 Tokens are the basic building blocks of a Doc object - everything that helps us understand the meaning of the text is
@@ -71,6 +71,19 @@ derived from tokens and their relationship to one another.
 * `Infix`: characters in between.
 * `Exception`: Special-case rule to split a string into several tokens or prevent a token from being split when punctuation
 rules are applied.
+
+## Steamming
+Stemming is a somewhat crude method for cataloging related words, it essentially chops off letters from the end until
+the stem is reached. This works fairly well in most cases, but unfortunatly English has many exceptions where a more
+sophisticated process is required.
+
+One of the most common and effective stemming tools is `Porter's Algorithm`. The algorithm employs five phases of word
+reduction, each with its own set of mapping rules. \
+In the first phase, simple suffix mapping rules are defined.
+
+Snowball is the name of a stemming language also developed by Martin Porter. The algorithm used here is more accurately
+called the "English Stemmer" or "Porter2 Stemmer". It offers a slight imporvment over the original Porter Stemmer, both 
+in logic and speed.
 
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
