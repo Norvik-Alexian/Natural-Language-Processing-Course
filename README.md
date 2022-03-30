@@ -11,7 +11,6 @@ this [website](https://strftime.org/) provide specifc SRF time code.
 * `+` - opens a file for updating (reading and writing)
 
 ## Working with PDF files
-* Often you may need to read in text data from a PDF file.
 * We can use the `PyPDF2` library to read in text data from a PDF file.
 * Some PDFs are created through scanning, instead of being exported from a text editor like Word
 * These scanned PDF are more like image files, making it much harder to extract the text.
@@ -64,6 +63,17 @@ easier to perform with NLTK.
 _Natural Language Processing_ is an area of computer science and artificial intelligence concerned with interactions
 between computers and human (natural) languages, in particular how to program computers to process and analyze large 
 amount of natural language data.
+
+## Tokenization
+Tokenization is the process of breaking up the original text into component pieces (tokens).\
+Tokens are the basic building blocks of a Doc object - everything that helps us understand the meaning of the text is
+derived from tokens and their relationship to one another.
+
+* `prefix`: characters at the beginning.
+* `suffix`: characters at the end.
+* `Infix`: characters in between.
+* `Exception`: Special-case rule to split a string into several tokens or prevent a token from being split when punctuation
+rules are applied.
 
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures)
