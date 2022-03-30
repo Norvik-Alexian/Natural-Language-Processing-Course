@@ -1,6 +1,3 @@
-## Specific SRF time 
-this [website](https://strftime.org/) provide specifc SRF time code.
-
 ## Python File Modes
 * `r` - opens a file for reading. (default)
 * `w` - opens a file for writing. creates a new file if it does not exist or truncates the file if it exits.
@@ -76,4 +73,6 @@ derived from tokens and their relationship to one another.
 rules are applied.
 
 ## References
-[Spacy usage fact figures](https://spacy.io/usage/facts-figures)
+[Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
+[SRF time code](https://strftime.org/) \
+[Spacy Visualizers](https://spacy.io/usage/visualizers)
