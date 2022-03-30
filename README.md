@@ -95,6 +95,11 @@ Lemmatization available instead of Stemming.
 
 Lemmatization looks at surrounding text to determine a given word's part of speech, it does not categorize phrases.
 
+## Stop Words
+Words like "a" and "the" appear so frequently that they don't require tagging as thoroughly as nouns, verbs and modifiers.
+We call these `stop words`, and they can be filtered from the text to be processed. \
+Spacy holds a built-in list of some 326 English stop words.
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
 [SRF time code](https://strftime.org/) \
