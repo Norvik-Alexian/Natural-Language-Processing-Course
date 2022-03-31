@@ -100,6 +100,10 @@ Words like "a" and "the" appear so frequently that they don't require tagging as
 We call these `stop words`, and they can be filtered from the text to be processed. \
 Spacy holds a built-in list of some 326 English stop words.
 
+## Vocabulary and Matching
+We can think of this as a powerful version of Regular Expression where we actually take parts of speech into account for
+our pattern search.
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
 [SRF time code](https://strftime.org/) \
