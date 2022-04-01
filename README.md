@@ -110,6 +110,10 @@ statistical models come in, which enable spacy to **make predictions** of which 
 context. A trained component includes binary data that is produced by showing a system enough examples for it to make
 predictions that generalize across the language, for example, a word following "the" in English is most likely a noun.
 
+## Named Entity Recognition
+Named-entity recognition (NER) seeks to locate and classify named entity mentions in unstructured text into pre-defined 
+categories such as the person names, organizations, locations, medical codes, time expressions, quantities, monetary values,
+percentages, etc.
 
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
