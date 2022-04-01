@@ -104,6 +104,13 @@ Spacy holds a built-in list of some 326 English stop words.
 We can think of this as a powerful version of Regular Expression where we actually take parts of speech into account for
 our pattern search.
 
+## Part of Speech Tagging (POS)
+After Tokenization, spacy can **parse** and **tag** a given `Doc` object. This is where the trained pipeline and its
+statistical models come in, which enable spacy to **make predictions** of which tag or label most likely applies in this 
+context. A trained component includes binary data that is produced by showing a system enough examples for it to make
+predictions that generalize across the language, for example, a word following "the" in English is most likely a noun.
+
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
 [SRF time code](https://strftime.org/) \
