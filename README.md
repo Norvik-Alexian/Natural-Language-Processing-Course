@@ -115,6 +115,11 @@ Named-entity recognition (NER) seeks to locate and classify named entity mention
 categories such as the person names, organizations, locations, medical codes, time expressions, quantities, monetary values,
 percentages, etc.
 
+## Sentence Segmentation
+A `Doc` object's sentences are available via the `Doc.sents` property. To view a `Doc`'s sentences, you can iterate over 
+the `Doc.sents`, a generator that yields `Span` objects. We can also check whether a `Doc` has sentence boundaries by calling
+`Doc.has_annotation` with the attribute name "SENT_START".
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
 [SRF time code](https://strftime.org/) \
