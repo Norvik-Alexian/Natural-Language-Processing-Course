@@ -129,12 +129,57 @@ The learning algorithm receives a set of inputs along with the corresponding cor
 comparing its actual output with correct outputs to find errors. It then modifies the model accordingly. \
 Supervised learning is commonly used in applications where historical data predicts likely future events.
 
-### Machine Learning Process
+### Machine Learning Process:
 1. `Data Acquisition`: get your data, Customers, Sensors and etc.
 2. `Data Cleaning`: Clean and Format your data using Scikit Learn and Vectorization.
 3. `Test Data & Training Data`: on Training data we are going to have the model to learn from training data, or we can call 
 fitting the model and on Test data we are going to take the model that we are training and test it against the test data.
 4. `Model Deployment`
+
+## Classification Matrics
+The key classification metrics we need to understand are:
+* Accuracy
+* Recall
+* Precision
+* F1-Score
+
+Typically, in any classification task your model can only achieve two results:
+1. Either your model was **correct** in its prediction.
+2. Or your model was **incorrect** in its prediction.
+
+Fortunately incorrect vs correct expands to situation where you have multiple classes. \
+We repeat the process of Model Evaluation for all the texts in our x test data. At the end we will have a count of correct
+matches and a count of incorrect matches. The key realization we need to make, is that in the real world, not all incorrect
+or correct matches hold equal value.
+
+### Accuracy:
+* Accuracy in classification problem is the number of correct predictions made by the model divided by the total number of 
+predictions.
+* Accuracy is useful when target classes are well-balanced.
+* Accuracy is not a good choice with unbalanced classes.
+
+### Recall:
+Ability of a model to find all the relevent cases within a dataset. \
+The precise definition of recall is the number of true positive divided by the number of true positive plus the number of
+false negatives.
+
+### Precision:
+Ability of classification model to identify only the relevent data points. Precision is defined as the number of true
+positives, divided by the number of true plus the number of false positives.
+
+### Recall & Precision:
+While recall expresses the ability to find all relevant instances in a dataset, precision expresses the proportion of the
+data points our model says was relevant actually were relevant.
+
+### F1-Score:
+In case where we want to find an optimal blend of precision and recall we can combine the two matrices using what is called
+the F1-Score. \
+The F1 score is the hormonic mean of precision and recall taking both matrices into account in the following equation
+
+`F1 = 2 * precision * recall / precision + recall`
+
+The reason that we are using hormonic mean instead of simple average because it punishes extreme values. \
+A classifier with a precision of 1.0 and a recall of 0.0 has simple average of 0.5 but an F1 score of 0.
 
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
