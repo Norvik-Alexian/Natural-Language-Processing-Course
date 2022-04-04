@@ -120,6 +120,22 @@ A `Doc` object's sentences are available via the `Doc.sents` property. To view a
 the `Doc.sents`, a generator that yields `Span` objects. We can also check whether a `Doc` has sentence boundaries by calling
 `Doc.has_annotation` with the attribute name "SENT_START".
 
+## Machine Learning Overview
+Machine Learning is a method of data analysis that automates analytical model building. \
+Using algorithms that iteratively learn from data, machine learning allows computers to find hidden insights without being 
+explicitly programmed where to look. \
+Supervised learning algorithms are trained using labeled examples, such as an input where the desired output is known. \
+The learning algorithm receives a set of inputs along with the corresponding correct outputs, and the algorithm learns by 
+comparing its actual output with correct outputs to find errors. It then modifies the model accordingly. \
+Supervised learning is commonly used in applications where historical data predicts likely future events.
+
+### Machine Learning Process
+1. `Data Acquisition`: get your data, Customers, Sensors and etc.
+2. `Data Cleaning`: Clean and Format your data using Scikit Learn and Vectorization.
+3. `Test Data & Training Data`: on Training data we are going to have the model to learn from training data, or we can call 
+fitting the model and on Test data we are going to take the model that we are training and test it against the test data.
+4. `Model Deployment`
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
 [SRF time code](https://strftime.org/) \
