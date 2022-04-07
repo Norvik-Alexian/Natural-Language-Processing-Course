@@ -47,7 +47,7 @@ found_matches = matcher(doc2)
 
 matcher = PhraseMatcher(nlp.vocab)
 
-with open('UPDATED_NLP_COURSE/TextFiles/reaganomics.txt', encoding='utf-8', errors='ignore') as file:
+with open('../UPDATED_NLP_COURSE/TextFiles/reaganomics.txt', encoding='utf-8', errors='ignore') as file:
     doc3 = nlp(file.read())
 
 phrase_list = ['voodoo economics', 'supply-side economics', 'trickle-down economics', 'free-market economics']
