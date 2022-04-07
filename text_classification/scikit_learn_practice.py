@@ -8,7 +8,7 @@ from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
-data_file = pd.read_csv('../UPDATED_NLP_COURSE/TextFiles/smsspamcollection.tsv', sep='\t')
+data_file = pd.read_csv('../../UPDATED_NLP_COURSE/TextFiles/smsspamcollection.tsv', sep='\t')
 
 # print(data_file.head())   # show the first 5 rows
 # print(data_file.isnull().sum())   # show empty values in the dataset
