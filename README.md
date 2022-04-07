@@ -207,6 +207,25 @@ into training set and testing set. \
 Now the model has been fit and trained on the training dataset, the model is ready to predict lables or values on the
 testing set.
 
+## Text Feature Extraction
+Most classic machine learning algorithms can't take in raw text, instad we need to perform a feature "extraction" from the 
+raw text in order to pass numerical features to the machine learning algorithm.
+
+* `Term frequency tf(t, d)`: is the raw count of a term in a document, i.e. the number of times that term t occurs in 
+document d. However, Term frequency alone isn't enough for a thorough feature analysis of the text.
+
+An inverse document frequency factor is incorprated which diminishes the weight of terms that occur very frequently in
+the document set and increases the weight of terms that occur rarely.
+
+* `TF-IDF = term frequency * (1 / document frequency)`
+* `TF-IDF = term frequency * inverse document frequency`
+
+TF-IDF allows us to understand the context of words across an entire of documents, instead of just its relative importance 
+in a single document.
+
+### Count Vectorization:
+It is used to transform a given text into a vector on the basis of frequency of each word that occurs in the entire text.
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
 [SRF time code](https://strftime.org/) \
