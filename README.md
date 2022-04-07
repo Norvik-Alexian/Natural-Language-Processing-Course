@@ -181,6 +181,24 @@ The F1 score is the hormonic mean of precision and recall taking both matrices i
 The reason that we are using hormonic mean instead of simple average because it punishes extreme values. \
 A classifier with a precision of 1.0 and a recall of 0.0 has simple average of 0.5 but an F1 score of 0.
 
+## Confusion Matrix
+A way to view various metrics of classification is the confusion Matrix. \
+In a classification problem, during the testing phase you will have two categories:
+1. True Condition
+2. Predicted Condition
+
+The main point to remember with the confusion matrix and the various calculated matrices is that they are all fundamentally 
+ways of camparing the predicted values vs the true values. We can use a confusion matrix to evaluate our model. 
+
+Basic Terminology:
+* True Positive (TP)
+* True Negative (TN)
+* False Positive (FP)
+* False Negative (FN)
+
+Accuracy: (TP + TN) / total \
+Misclassification/Error rate: (FP + FN) / total
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
 [SRF time code](https://strftime.org/) \
