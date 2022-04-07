@@ -199,6 +199,14 @@ Basic Terminology:
 Accuracy: (TP + TN) / total \
 Misclassification/Error rate: (FP + FN) / total
 
+## Scikit-Learn
+`Estimator parameters`: All the parameters of an estimator(model) can be set when it is instantiated, and have suitable 
+default values. \
+Once we have our model created with our parameters, it is time to fit our model on some data, but we should split this data
+into training set and testing set. \
+Now the model has been fit and trained on the training dataset, the model is ready to predict lables or values on the
+testing set.
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
 [SRF time code](https://strftime.org/) \
