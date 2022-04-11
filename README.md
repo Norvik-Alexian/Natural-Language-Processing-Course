@@ -242,6 +242,14 @@ Word2vec trains words against other words that neighbour them in the input corpu
 using context to predict a target word known as continuous bag of words (CBOW), or using a word to predict a target context,
 which is called skip-gram.
 
+## Sentiment Analysis
+VADER (Valence Aware Dictionary for Sentiment Reasoning) is a model used for text sentiment analysis that is sensitive to 
+both polarity (positive/negative) and intensity (strength) of emotion.
+
+Sentiment Analysis on raw text is always challenging however, due to variety of possible factors:
+* Positive and Negative sentiment in the same text data.
+* Sarcasm using positive words in a negative way.
+
 ## References
 [Spacy usage fact figures](https://spacy.io/usage/facts-figures) \
 [SRF time code](https://strftime.org/) \
