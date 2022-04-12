@@ -102,3 +102,6 @@ the document set and increases the weight of terms that occur rarely.
 
 TF-IDF allows us to understand the context of words across an entire of documents, instead of just its relative importance 
 in a single document.
+
+### Count Vectorization:
+It is used to transform a given text into a vector on the basis of frequency of each word that occurs in the entire text.
