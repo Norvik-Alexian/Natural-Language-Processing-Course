@@ -1,4 +1,4 @@
-myfile = open('../files/text.txt', 'r')
+myfile = open('files/text.txt', 'r')
 
 print(myfile.read())
 
@@ -14,9 +14,9 @@ for line in content:
 
 myfile.close()
 
-with open('../files/text.txt', 'w+') as file:
+with open('files/text.txt', 'w+') as file:
     file.write('This is a new text')
     file.read()
 
-with open('../files/text_2.txt', 'a+') as file:
+with open('files/text_2.txt', 'a+') as file:
     file.write('My first line in this file')

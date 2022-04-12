@@ -12,10 +12,10 @@ with open('../UPDATED_NLP_COURSE/00-Python-Text-Basics/US_Declaration.pdf', mode
     page_one = pdf_reader.getPage(0)
     pdf_writer = PyPDF2.PdfFileWriter()
     pdf_writer.addPage(page_one)
-    with open('../files/mypdf.pdf', 'wb') as output_pdf:
+    with open('files/mypdf.pdf', 'wb') as output_pdf:
         pdf_writer.write(output_pdf)
 
-with open('../files/mypdf.pdf', 'rb') as file:
+with open('files/mypdf.pdf', 'rb') as file:
     pdf_reader = PyPDF2.PdfFileReader(file)
     print(pdf_reader.numPages)
 
