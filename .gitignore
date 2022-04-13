@@ -135,3 +135,6 @@ UPDATED_NLP_COURSE
 
 # Models
 deepLearning_nlp/models/
+
+# Tokenizer
+deepLearning_nlp/tokenizer/
