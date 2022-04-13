@@ -33,3 +33,7 @@ Cells that are a function of inputs from previous time steps are also known as _
 RNN are also flexible in their inputs and outputs, for both sequences and single vector values.
 * Sequence to Sequence
 * Vector to Sequence
+
+An issue RNN face is that after a while the network will begin to "forget" the first inputs, as information is lost at each
+step going through the RNN, so the system or Long Short Term Memory(LSTM) cell, was created to help address these
+recurrent neural 
