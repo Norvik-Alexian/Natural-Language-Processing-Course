@@ -1,8 +1,10 @@
 import spacy
+import random
 import numpy as np
 
 from pickle import dump, load
-from tensorflow.keras.models import Sequential
+from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.layers import Dense, LSTM, Embedding
 from tensorflow.keras.preprocessing.text import Tokenizer
@@ -52,8 +54,8 @@ sequences = tokenizer.texts_to_sequences(text_sequence)
 # print(sequences[1])
 # print(tokenizer.index_word)
 
-for i in sequences[0]:
-    print(f'{i}: {tokenizer.index_word[i]}')
+# for i in sequences[0]:
+#     print(f'{i}: {tokenizer.index_word[i]}')
 
 # print(tokenizer.word_counts)    # counts how many times the token showed up in the text
 
@@ -87,7 +89,32 @@ def create_model(vocabulary_size: int, seq_len: int):
 
 model = create_model(vocabulary_size+1, seq_len)
 
-model.fit(X, y, batch_size=128, epochs=5, verbose=1)
-model.save('./models/text_generator_model.h5')
+# model.fit(X, y, batch_size=128, epochs=5, verbose=1)
+# model.save('./models/text_generator_model.h5')
 
-dump(tokenizer, open('tokenizer/my_simpleTokenizer', mode='wb'))
+# dump(tokenizer, open('tokenizer/my_simpleTokenizer', mode='wb'))
+
+
+def generate_text(model, tokenizer, seq_len, seed_text, num_gen_word):
+    output_text = []
+    input_text = seed_text
+
+    for i in range(num_gen_word):
+        encoded_text = tokenizer.texts_to_sequences([input_text])[0]
+        pad_encoded = pad_sequences([encoded_text], maxlen=seq_len, truncating='pre')
+        pred_word_ind = model.predict_classes(pad_encoded, verbose=0)[0]
+        pred_word = tokenizer.index_word[pred_word_ind]
+        input_text += ' ' + pred_word
+        output_text.append(pred_word)
+
+    return ' '.join(output_text)
+
+random.seed(101)
+random_pick = random.randint(0, len(text_sequence))
+random_seed_text = text_sequence[random_pick]
+
+model = load_model('./models/text_generator_model.h5')
+tokenizer = load(open('./tokenizer/my_simpleTokenizer', 'rb'))
+seed_text = ' '.join(random_seed_text)
+
+generated_text = generate_text(model, tokenizer, seq_len, seed_text, num_gen_word=25)
