@@ -138,3 +138,6 @@ deepLearning_nlp/models/
 
 # Tokenizer
 deepLearning_nlp/tokenizer/
+
+# Dataset
+deepLearning_nlp/files/
