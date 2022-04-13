@@ -132,3 +132,6 @@ dmypy.json
 # Folder
 UPDATED_NLP_COURSE
 .DS_Store
+
+# Models
+deepLearning_nlp/models/
