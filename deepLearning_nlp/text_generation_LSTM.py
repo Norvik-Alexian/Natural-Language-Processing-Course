@@ -1,6 +1,10 @@
 import spacy
 import numpy as np
 
+from pickle import dump, load
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.layers import Dense, LSTM, Embedding
 from tensorflow.keras.preprocessing.text import Tokenizer
 
 
@@ -59,4 +63,31 @@ vocabulary_size = len(tokenizer.word_counts)
 
 sequences = np.array(sequences)
 
-print(sequences)
+X = sequences[:, :-1]
+y = sequences[:, -1]
+
+y = to_categorical(y, num_classes=vocabulary_size+1)
+seq_len = X.shape[1]
+
+# print(X.shape)
+
+
+def create_model(vocabulary_size: int, seq_len: int):
+    model = Sequential()
+    model.add(Embedding(vocabulary_size, seq_len, input_length=seq_len))
+    model.add(LSTM(150, return_sequences=True))
+    model.add(LSTM(150))
+    model.add(Dense(150, activation='relu'))
+    model.add(Dense(vocabulary_size, activation='softmax'))
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+    model.summary()
+
+    return model
+
+model = create_model(vocabulary_size+1, seq_len)
+
+model.fit(X, y, batch_size=128, epochs=5, verbose=1)
+model.save('./models/text_generator_model.h5')
+
+dump(tokenizer, open('tokenizer/my_simpleTokenizer', mode='wb'))
